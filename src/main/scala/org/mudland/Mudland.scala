@@ -16,7 +16,7 @@ object Mudland extends App {
   val gameServer = system.actorOf(Props[GameServer], "game-server")
 
   gameServer
-    .ask(IOServer.Bind("192.168.0.120", 8888))(1 second span)
+    .ask(IOServer.Bind("localhost", 8888))(1 second span)
     .onSuccess {
     case IOServer.Bound(endpoint, _) =>
       println("MUDland server started on port 8888")
