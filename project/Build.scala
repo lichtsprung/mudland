@@ -21,7 +21,7 @@ object Mudland extends Build {
     resolvers += Resolvers.typesafeReleaseRepo,
     resolvers += Resolvers.typesafeSnapshotRepo,
     resolvers += Resolvers.sprayReleaseRepo,
-    resolvers += Resolvers.sprayNightlyRepo,
+    resolvers += Resolvers.sprayNightlyRepo
   )
 
   lazy val root = Project(id = "root", base = file("."), settings = projectSettings)
